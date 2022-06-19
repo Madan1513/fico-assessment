@@ -53,7 +53,7 @@ function DataTable() {
 
   useEffect(() => {
     if (filteredData.length === 0) {
-      axios.get("http://localhost:3004/contacts", {}).then((response) => {
+      axios.get("https://json-server-madan.herokuapp.com/contacts", {}).then((response) => {
         if (response.data.length > 0) {
           setTotalData(response.data);
           setTableData(response.data.slice(0, dataPerPage));
